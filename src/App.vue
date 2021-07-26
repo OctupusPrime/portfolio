@@ -1,5 +1,4 @@
 <template>
-
   <aside class="top-bar bg-gray">
     <div class="container flex">
       <h2 class="site-logo no-select">.Portfolio</h2>
@@ -11,8 +10,6 @@
 
     </div>
   </aside>
-
-  <div class="rainbow-overflow extra-bold gradient" :data-title="$t('default.site-title')"/>
 
   <header class="bg-gray" id="header" ref="header" :style="{top: -headerOffsetTop + 'px'}">
     <section class="header-wrapper" :style="headerScaleDown">
@@ -40,7 +37,7 @@
 
   <ScrollTop :breakPoint="750" :srcolledTop="scrolled"/>
 
-  <main class="box-shadow" id="main" v-show="animationPassed">
+  <main class="box-shadow" id="main">
       <h2 class="main-title extra-bold">{{$t('default.main.title')}}</h2>
       <p class="main-subtitle">{{$t('default.main.subtitle')}}</p>
     <section class="main-section container">
@@ -51,7 +48,7 @@
     </section>
   </main>
 
-  <footer class="bg-gray" id="footer" v-show="animationPassed" :style="{bottom: -footerOffsetBottom + 'px'}">
+  <footer class="bg-gray" id="footer" :style="{bottom: -footerOffsetBottom + 'px'}">
     <h2 class="footer-title rainbow-text">{{$t('default.footer.title')}}</h2>
     <div class="footer-btns-group">
         <a href="https://t.me/Octupus_Prime" class="footer-btn">Telegram</a>
@@ -85,7 +82,6 @@ export default {
     scrolled: 0,
     headerOffsetTop: 0,
     footerOffsetBottom: 0,
-    animationPassed: false,
     isDarkTheme: false,
     skills: ['HTML 5', 'CSS, LESS', 'Vue, Nuxt', 'Javascript', 'gulp', 'Figma', 'node.js'],
     mainWorks: {
@@ -218,20 +214,6 @@ export default {
   },
   mounted() {
     const header = document.getElementById('header')
-
-    this.$nextTick(() => {
-      const rainbowText = document.querySelector('.rainbow-text').getBoundingClientRect()
-      document.querySelector('.rainbow-overflow').style = `top: ${rainbowText.y + rainbowText.height/2}px;`
-    })
-    
-    setTimeout(function(){//load animation
-      document.querySelector('.rainbow-overflow').classList.add('scale-down')
-      setTimeout(function(){
-        header.classList.add('auto-height')
-        this.animationPassed = true
-        this.resized()
-      }.bind(this), 1000)
-    }.bind(this), 450)
   
     window.addEventListener('scroll', function() {
         this.scrolled = window.scrollY;
@@ -242,6 +224,8 @@ export default {
           header.classList.remove('hidden') 
     }.bind(this))
 
+    this.resized()
+    
     window.addEventListener('resize', function() {
       this.resized()
     }.bind(this), true);
@@ -270,12 +254,8 @@ export default {
   header {
     overflow: hidden;
     position: sticky;
-    height: 100vh;
-    z-index: 2;
-  }
-  .auto-height {
     min-height: 100vh;
-    height: auto !important;
+    z-index: 2;
   }
   .header-wrapper {
     max-width: 700px;
@@ -318,6 +298,7 @@ export default {
     background: linear-gradient(265.2deg, var(--bg-light-purple-blue) -2.62%, var(--bg-extra-light-blue) 102.34%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: relative;
   }
   .header-body {
     font-size: 1.5rem;
@@ -383,36 +364,6 @@ export default {
   }
 
 /* Layout */
-
-  .rainbow-wrapper {
-    position: relative;
-  }
-  .rainbow-overflow{
-    display: block;
-    width: 300vh;
-    height: 300vh;
-    position: fixed;
-    left: 50%;
-    transition: all .9s ease;
-    overflow: hidden;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    border-radius: 100%;
-  }
-  .rainbow-overflow::after {
-    content: attr(data-title);
-    display: inline-block;
-    font-size: 3.375rem;
-    color: var(--text-black);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .scale-down{
-    width: 0;
-    height: 0;
-  }
 
   .header-btns-group {
     text-align: center;
