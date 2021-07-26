@@ -1,0 +1,146 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--text-black);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, a, p, span, i {
+    transition: color .2s ease, border .2s ease, background .2s ease;
+} 
+
+/* ====================
+    Variables
+==================== */
+
+body {
+    --bg-dark-gray: #D8D8D8;
+    --bg-light-gray: #F5F5F5;
+    --bg-white: #FFFFFF;
+    --bg-light-blue: #4285f4;
+    --bg-extra-light-blue: #40C9FF;
+    --bg-light-purple-blue: #E81CFF;
+
+    --text-black: #1A1A1A;
+    --text-dark-gray: #626262;
+    --text-light-gray: #989898; 
+}
+
+.dark {
+    --bg-dark-gray: #242424;
+    --bg-light-gray: #121212;
+    --bg-white: #1D1D1D;
+    --bg-extra-light-blue: #345FA8;
+    --bg-light-purple-blue: #8B009B;
+
+    --text-black: #FFFFFF;
+    --text-dark-gray: #FFFFFF;
+    --text-light-gray: #2C2C2C;
+}
+.dark .img-shadow {
+    filter: none;
+}
+.dark .box-shadow {
+    box-shadow: none;
+}
+/* ====================
+    Typography
+==================== */
+
+h1, h2, h3, h4, h5, h6, a, p, button {
+    margin: 0;
+}
+
+p {
+    line-height: 150%;
+}
+
+a {
+    display: inline-block;
+    color: var(--text-black);
+    padding: .5em 1.25em;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5em;
+    user-select: none;
+    cursor: pointer;
+}
+
+.extra-bold {
+    font-weight: 800;
+}
+
+.no-select {
+    user-select: none;
+}
+
+.btn-black,
+.btn-white {
+    border-radius: 15px;
+    text-align: center;
+}
+.btn-black {
+    color: var(--bg-white);
+    background: var(--text-black);
+}
+.btn-white {
+    border: 3px solid var(--text-black) !important;
+}
+
+/* ====================
+    Layout
+==================== */
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bg-gray {
+    background: var(--bg-light-gray);
+}
+
+.border-top {
+    border-top: 3px solid var(--text-black);
+}
+
+.box-shadow {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+.img-shadow {
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
+}
+.gradient {
+    background: linear-gradient(265.2deg, var(--bg-light-purple-blue) -2.62%, var(--bg-extra-light-blue) 102.34%);
+}
+
+/* ====================
+    Media
+==================== */
+
+@media (max-width: 400px) {
+    html {
+        font-size: 13.5px;
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "site-title": "Portfolio",
+  "header": {
+    "title": "This is my",
+    "body": "Hello there my name is <strong>Misha Sokil</strong> and im <strong>junior frontend developer</strong>. Im live in Ukraine, and I ❤️ develop web applications and interfaces.",
+    "btns": {
+      "left": "Projects",
+      "right": "Contacts"
+    },
+    "skills-subtitle": "My skills"
+  },
+  "main": {
+    "title": "My works",
+    "subtitle": "Interfaces, sites, apps and more cool fings.",
+    "btns": {
+      "app": "Open app",
+      "demo": "Preview"
+    }
+  },
+  "footer": {
+    "title": "Have an awesome day.",
+    "designed": "Designed by: Misha Sokil",
+    "developed": "Developed by: Misha Sokil"
+  }
+}
