@@ -8,6 +8,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: var(--text-black);
+    overflow-x: hidden;
 }
 
 img {
@@ -34,10 +35,12 @@ body {
     --bg-light-blue: #4285f4;
     --bg-extra-light-blue: #40C9FF;
     --bg-light-purple-blue: #E81CFF;
+    --bg-light-red: #ffecec;
 
     --text-black: #1A1A1A;
     --text-dark-gray: #626262;
     --text-light-gray: #989898; 
+    --text-light-red: #FF3838;
 }
 
 .dark {
@@ -46,6 +49,7 @@ body {
     --bg-white: #1D1D1D;
     --bg-extra-light-blue: #345FA8;
     --bg-light-purple-blue: #8B009B;
+    --bg-light-red: #251515;
 
     --text-black: #FFFFFF;
     --text-dark-gray: #FFFFFF;
@@ -129,7 +133,6 @@ a {
 .img-shadow {
     filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
 }
-
 /* ====================
     Media
 ==================== */

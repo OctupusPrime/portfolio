@@ -41,10 +41,9 @@
       <h2 class="main-title extra-bold">{{$t('default.main.title')}}</h2>
       <p class="main-subtitle">{{$t('default.main.subtitle')}}</p>
     <section class="main-section container">
-      <MainArticle  v-for="(item, index) in mainWorks[$i18n.locale]" :key="index"
+      <MainArticle  v-for="(item, index) in mainWorks" :key="index"
                     :article="item"
-                    :index="index"
-                    :scrolledTop="scrolled"/>
+                    :index="index"/>
     </section>
   </main>
 
@@ -84,80 +83,84 @@ export default {
     footerOffsetBottom: 0,
     isDarkTheme: false,
     skills: ['HTML 5', 'CSS, LESS', 'Vue, Nuxt', 'Javascript', 'gulp', 'Figma', 'node.js'],
-    mainWorks: {
-      "en": [
-        {
-          title: '.Todos',
-          body: 'The rest api application with registration and authentication and a client is built like Trello with its own functions and full responsiveness.',
-          appLink: 'https://vue-todos-nuxt.herokuapp.com',
-          gitLink: 'https://github.com/OctupusPrime/todos-v2',
-          imgPath: 'work1.png',
-          isMobile: true
-        },{
-          title: '.MyKeep',
-          body: 'An application for creating notes in the form of a responsive spreadsheet like Google keep with saving elements using vuex.',
-          appLink: 'https://my-keep-v2.herokuapp.com',
-          gitLink: 'https://github.com/OctupusPrime/my-keep-v2',
-          imgPath: 'work2.png',
-          isMobile: true
-        },{
-          title: '.MyPaint',
-          body: 'Simple drawing app with play and save features in vuex.',
-          appLink: 'https://my-paint.herokuapp.com',
-          gitLink: 'https://github.com/OctupusPrime/my-paint',
-          imgPath: 'work3.png',
-          isMobile: false
-        },{
-          title: 'Digital art',
-          body: 'Landing page digital art with full responsiveness.',
-          appLink: 'https://octupusprime.github.io/digital-art-markup',
-          imgPath: 'work4.png',
-          isMobile: true    
-        },{
-          title: 'Digg',
-          body: 'A simple landing page with full responsiveness and a working mobile menu.',
-          appLink: 'https://dying-fuel.000webhostapp.com',
-          imgPath: 'work5.png',
-          isMobile: true      
-        }
-      ],
-      "ru": [
-        {
-          title: '.Todos',
-          body: 'Приложение состоит из rest api с регистрацией и аутентификацией и клиента который построен как Trello со своими функциями и полным адаптивом.',
-          appLink: 'https://vue-todos-nuxt.herokuapp.com',
-          gitLink: 'https://github.com/OctupusPrime/todos-v2',
-          imgPath: 'work1.png',
-          isMobile: true  
-        },{
-          title: '.MyKeep',
-          body: 'Приложение для создания заметок в видe адаптивной таблицы как Google keep с сохранение элементов c помочью vuex.',
-          appLink: 'https://my-keep-v2.herokuapp.com',
-          gitLink: 'https://github.com/OctupusPrime/my-keep-v2',
-          imgPath: 'work2.png',
-          isMobile: true
-        },{
-          title: '.MyPaint',
-          body: 'Простое приложение для рисования с функциями воспроизведения и сохранения в vuex.',
-          appLink: 'https://my-paint.herokuapp.com',
-          gitLink: 'https://github.com/OctupusPrime/my-paint',
-          imgPath: 'work3.png',
-          isMobile: false
-        },{
-          title: 'Digital art',
-          body: 'Целевая страница digital art с полным адаптивом.',
-          appLink: 'https://octupusprime.github.io/digital-art-markup',
-          imgPath: 'work4.png',
-          isMobile: true     
-        },{
-          title: 'Digg',
-          body: 'Простоя целевая страница с полным адаптивом и с рабочим мобильным меню.',
-          appLink: 'https://dying-fuel.000webhostapp.com',
-          imgPath: 'work5.png',
-          isMobile: true     
-        }
-      ]
-    }
+    mainWorks: [
+      {
+        locale: {
+          'en': {
+            body: 'The rest api application with registration and authentication and a client is built like Trello with its own functions and full responsiveness.',
+            warning: 'Heroku takes a long time to wake up'
+          },
+          'ru': {
+            body: 'Приложение состоит из rest api с регистрацией и аутентификацией и клиента который построен как Trello со своими функциями и полным адаптивом.',
+            warning: 'Heroku надо время проснутся'          
+          }
+        },
+        title: '.Todos',
+        steck: ['HTML 5', 'CSS 3', 'Nuxt.js', 'vuex', 'node.js', 'express', 'mongo db'],
+        appLink: 'https://vue-todos-nuxt.herokuapp.com',
+        gitLink: 'https://github.com/OctupusPrime/todos-v2',   
+        isMobile: true
+      },
+      {
+        locale: {
+          'en': {
+            body: 'An application for creating notes in the form of a responsive spreadsheet like Google keep with saving elements using vuex.',
+            warning: 'Heroku takes a long time to wake up'
+          },
+          'ru': {
+            body: 'Приложение для создания заметок в видe адаптивной таблицы как Google keep с сохранение элементов c помочью vuex.',
+            warning: 'Heroku надо время проснутся'          
+          }
+        },
+        title: '.MyKeep',
+        steck: ['HTML 5', 'LESS', 'Vue.js', 'vuex', 'vue-router'],
+        appLink: 'https://my-keep-v2.herokuapp.com',
+        gitLink: 'https://github.com/OctupusPrime/my-keep-v2',
+        isMobile: true
+      },
+      {
+        locale: {
+          'en': {
+            body: 'Simple drawing app with play and save features in vuex.'
+          },
+          'ru': {
+            body: 'Простое приложение для рисования с функциями воспроизведения и сохранения в vuex.'      
+          }
+        },
+        title: '.MyPaint',
+        steck:  ['HTML 5', 'CSS 3', 'Vue.js', 'vuex'],
+        appLink: 'https://my-paint.herokuapp.com',
+        gitLink: 'https://github.com/OctupusPrime/my-paint'    
+      },
+      {
+        locale: {
+          'en': {
+            body: 'Landing page digital art with full responsiveness.'
+          },
+          'ru': {
+            body: 'Целевая страница digital art с полным адаптивом.'      
+          }
+        },
+        title: 'Digital art',
+        steck:  ['HTML 5', 'CSS 3'],
+        appLink: 'https://octupusprime.github.io/digital-art-markup',
+        isMobile: true  
+      },
+      {
+        locale: {
+          'en': {
+            body: 'A simple landing page with full responsiveness and a working mobile menu.'
+          },
+          'ru': {
+            body: 'Простоя целевая страница с полным адаптивом и с рабочим мобильным меню.'      
+          }
+        },
+        title: 'Digg',
+        steck:  ['HTML 5', 'LESS', 'Javascript', 'Jquery'],
+        appLink: 'https://dying-fuel.000webhostapp.com',
+        isMobile: true  
+      }
+    ],
   }),
   watch: {
     'isDarkTheme'() {
@@ -225,7 +228,7 @@ export default {
     }.bind(this))
 
     this.resized()
-    
+
     window.addEventListener('resize', function() {
       this.resized()
     }.bind(this), true);
@@ -331,7 +334,7 @@ export default {
     position: sticky;
     top: 77px;
     background: var(--bg-white);
-    padding: 1.5vh 0;
+    padding: 1.7vh 0;
     z-index: 2;
   }
   .main-subtitle {
