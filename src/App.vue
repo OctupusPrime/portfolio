@@ -207,7 +207,7 @@ export default {
     resized() {
       setTimeout(function(){//load animation
         this.headerOffsetTop = Math.abs(window.innerHeight - document.getElementById('header').offsetHeight)
-        this.footerOffsetBottom = Math.abs(window.innerHeight - document.getElementById('footer').offsetHeight - document.querySelector('.top-bar').offsetHeight)
+        this.footerOffsetBottom = Math.abs(window.innerHeight - document.getElementById('footer').offsetHeight)
       }.bind(this), 10)
     }
   },
