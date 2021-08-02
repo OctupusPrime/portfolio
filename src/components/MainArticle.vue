@@ -13,9 +13,6 @@
             <div class="steck-group">
                 <p class="steck-item" v-for="item in article.steck" :key="item">{{item}}</p>
             </div>
-            <h4 class="article-warning" v-if="article.locale[$i18n.locale].warning">
-                {{ article.locale[$i18n.locale].warning }}
-            </h4>
             <div class="article-bnts-group" v-if="article.gitLink">
                 <a :href="article.appLink" class="article-btn btn-black" target="_blank">{{$t('default.main.btns.app')}}</a>
                 <a :href="article.gitLink" class="article-btn btn-white" target="_blank">GitHub</a>
@@ -88,17 +85,6 @@ export default {
         color: var(--bg-white);
         background: var(--text-black);
         border-radius: 8px;
-    }
-
-    .article-warning {
-        display: inline-block;
-        font-size: 1.5rem;
-        font-weight: 600;
-        padding: .35em .5em;
-        margin-top: 1em;
-        color: var(--text-light-red);
-        background: var(--bg-light-red);
-        border-radius: 10px;
     }
 
     .article-btn {

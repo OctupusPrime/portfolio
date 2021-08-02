@@ -87,12 +87,10 @@ export default {
       {
         locale: {
           'en': {
-            body: 'The rest api application with registration and authentication and a client is built like Trello with its own functions and full responsiveness.',
-            warning: 'Heroku takes a long time to wake up'
+            body: 'The rest api application with registration and authentication and a client is built like Trello with its own functions and full responsiveness.'
           },
           'ru': {
-            body: 'Приложение состоит из rest api с регистрацией и аутентификацией и клиента который построен как Trello со своими функциями и полным адаптивом.',
-            warning: 'Heroku надо время проснутся'          
+            body: 'Приложение состоит из rest api с регистрацией и аутентификацией и клиента который построен как Trello со своими функциями и полным адаптивом.'       
           }
         },
         title: '.Todos',
@@ -104,17 +102,15 @@ export default {
       {
         locale: {
           'en': {
-            body: 'An application for creating notes in the form of a responsive spreadsheet like Google keep with saving elements using vuex.',
-            warning: 'Heroku takes a long time to wake up'
+            body: 'An application for creating notes in the form of a responsive spreadsheet like Google keep with saving elements using vuex.'
           },
           'ru': {
-            body: 'Приложение для создания заметок в видe адаптивной таблицы как Google keep с сохранение элементов c помочью vuex.',
-            warning: 'Heroku надо время проснутся'          
+            body: 'Приложение для создания заметок в видe адаптивной таблицы как Google keep с сохранение элементов c помочью vuex.'      
           }
         },
         title: '.MyKeep',
         steck: ['HTML 5', 'LESS', 'Vue.js', 'vuex', 'vue-router'],
-        appLink: 'https://my-keep-v2.herokuapp.com',
+        appLink: 'https://octupusprime.github.io/my-keep-v2/',
         gitLink: 'https://github.com/OctupusPrime/my-keep-v2',
         isMobile: true
       },
