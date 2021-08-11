@@ -94,7 +94,7 @@ export default {
           }
         },
         title: '.Todos',
-        steck: ['HTML 5', 'CSS 3', 'Nuxt.js', 'vuex', 'node.js', 'express', 'mongo db'],
+        steck: ['html5', 'css3', 'nuxtjs', 'vuex', 'vue-roouter', 'nodejs', 'express', 'mongoose'],
         appLink: 'https://vue-todos-nuxt.herokuapp.com',
         gitLink: 'https://github.com/OctupusPrime/todos-v2',   
         isMobile: true
@@ -109,8 +109,8 @@ export default {
           }
         },
         title: '.MyKeep',
-        steck: ['HTML 5', 'LESS', 'Vue.js', 'vuex', 'vue-router'],
-        appLink: 'https://octupusprime.github.io/my-keep-v2/',
+        steck: ['html5', 'less', 'vuejs', 'vuex', 'vue-router', 'gulp'],
+        appLink: 'https://octupusprime.github.io/my-keep-v2',
         gitLink: 'https://github.com/OctupusPrime/my-keep-v2',
         isMobile: true
       },
@@ -124,8 +124,8 @@ export default {
           }
         },
         title: '.MyPaint',
-        steck:  ['HTML 5', 'CSS 3', 'Vue.js', 'vuex'],
-        appLink: 'https://my-paint.herokuapp.com',
+        steck:  ['html5-canvas', 'css3', 'vue.js', 'vuex'],
+        appLink: 'https://octupusprime.github.io/my-paint',
         gitLink: 'https://github.com/OctupusPrime/my-paint'    
       },
       {
@@ -138,8 +138,9 @@ export default {
           }
         },
         title: 'Digital art',
-        steck:  ['HTML 5', 'CSS 3'],
+        steck:  ['html5', 'css3'],
         appLink: 'https://octupusprime.github.io/digital-art-markup',
+        gitLink: 'https://github.com/OctupusPrime/digital-art-markup',
         isMobile: true  
       },
       {
@@ -152,8 +153,9 @@ export default {
           }
         },
         title: 'Digg',
-        steck:  ['HTML 5', 'LESS', 'Javascript', 'Jquery'],
-        appLink: 'https://dying-fuel.000webhostapp.com',
+        steck:  ['html5', 'less', 'javascript', 'jquery'],
+        appLink: 'https://github.com/OctupusPrime/digg-markup',
+        gitLink: 'https://octupusprime.github.io/digg-markup',
         isMobile: true  
       }
     ],
