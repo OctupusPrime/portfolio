@@ -102,6 +102,20 @@ export default {
       {
         locale: {
           'en': {
+            body: 'An app like google drive stores information in json. There are possibilities (copy, paste, cut, delete) as well as create files.'
+          },
+          'ru': {
+            body: 'Приложение как google drive хранит информацию в json. Есть возможности (копировать, вставлять, вырезать, удалять) а так же создавать файлы.'      
+          }
+        },
+        title: 'My Drive',
+        steck: ['html5', 'vuetify', 'vuejs', 'vuex', 'vue-router'],
+        appLink: 'https://octupusprime.github.io/my-drive/',
+        gitLink: 'https://github.com/OctupusPrime/my-drive',
+      },
+      {
+        locale: {
+          'en': {
             body: 'An application for creating notes in the form of a responsive spreadsheet like Google keep with saving elements using vuex.'
           },
           'ru': {
