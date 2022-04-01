@@ -57,7 +57,7 @@
     </div>
     <div class="footer-info">
         <a href="tel:+380958553178" class="footer-info-bnt">095 855 3178</a>
-        <a href="mailto:rasiapypkin2014@gmail.com" class="footer-info-bnt">rasiapypkin2014@gmail.com</a>
+        <a href="mailto:m.sokil.dev@gmail.com" class="footer-info-bnt">m.sokil.dev@gmail.com</a>
     </div>
     <div class="footer-body">
       <p class="footer-body-item">© 2021 .Portfolio </p>
@@ -97,6 +97,21 @@ export default {
         steck: ['html5', 'css3', 'nuxtjs', 'vuex', 'vue-roouter', 'nodejs', 'express', 'mongoose'],
         appLink: 'https://vue-todos-nuxt.herokuapp.com',
         gitLink: 'https://github.com/OctupusPrime/todos-v2',   
+        isMobile: true
+      },
+      {
+        locale: {
+          'en': {
+            body: 'Project for the P3M International Conference at the Polytechnic University, which helped to solve the problem of incorrect filling of applications and send it via telegram bot.'
+          },
+          'ru': {
+            body: 'Проект для Международной конференции P3M в Политехе, который помог решить проблему некорректного заполнения заявки и отправки ее через телеграм-бот.'       
+          }
+        },
+        title: 'P3M',
+        steck: ['html5', 'tailwind', 'vue3', 'vuex', 'nodejs', 'express', 'google api', 'telegram api'],
+        appLink: 'https://octupusprime.github.io/p3-front',
+        gitLink: 'https://github.com/OctupusPrime/p3-front',   
         isMobile: true
       },
       {
